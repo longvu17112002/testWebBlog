@@ -89,24 +89,17 @@ figure {
 #fh5co-header {
     padding-top: 40px;
     margin-bottom: 30px;
-    /* width: 55px;
-    background-color: #2da9d7; */
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
 }
 
 #fh5co-header .icon-menu {
-    display: none;
+    /* display: none; */
 }
 
 #fh5co-header #fh5co-logo img {
     max-width: 100%;
     width: auto;
     height: auto;
+    margin-top: 15px;
     /* width: 100px;
     height: auto; */
 }
@@ -136,106 +129,77 @@ figure {
     padding: 10px;
 }
 
-
-/* The side navigation menu */
-
-.sidenav {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Stay on top */
-    top: 0;
-    /* Stay at the top */
-    left: 0;
-    background-color: #111;
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
-}
-
-
-/* The navigation menu links */
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-
-/* When you mouse over the navigation links, change their color */
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-
-/* Position and style the close button (top right corner) */
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
 .nav-pc {
     display: none;
     /* display: flex;
     justify-content: space-around; */
 }
 
-
-/* #fh5co-header .nav-mobile {
+.mobile-nav.open-mobile-nav {
     display: flex;
-    justify-content: space-between;
+}
+
+.mobile-nav {
+    display: none;
+    justify-content: inherit;
     flex-direction: row;
-} */
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: #2da9d7;
+    /* display: none; */
+    height: 46px;
+    width: 100%;
+    justify-content: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* transition: top 0.5s; */
+}
 
-
-/* #fh5co-header ul li {
-    list-style-type: none;
-} */
-
-
-/* 
-#fh5co-header .side-nav {
-    display: flex;
+.sub-menu {
+    display: none;
     justify-content: space-around;
-    flex-direction: row;
-} */
+    flex-direction: column;
+    width: 170px;
+    height: 190px;
+    background: #f1f1f1;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 46px;
+}
+
+.sub-menu-icon {
+    width: 55px;
+    margin-left: auto;
+}
+
+.sub-menu-icon i {
+    font-size: 40px;
+    /* width: auto; */
+    height: auto;
+    width: auto;
+    display: block;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.sub-menu-icon i:hover {
+    opacity: 1;
+}
+
+.sub-menu-logo {
+    display: block;
+    /* width: 132px; */
+    float: right;
+    margin-top: 6px;
+}
+
+.sub-menu-logo img {
+    height: 40px;
+}
 
 @media screen and (max-width: 480px) {
     #fh5co-header nav ul li a {
@@ -245,6 +209,7 @@ figure {
 
 #fh5co-header .search-bar {
     margin-top: 16px;
+    margin-bottom: 16px;
     /* text-align: center; */
     /* right: 0;
     left: 0; */
@@ -257,6 +222,7 @@ figure {
     border: none;
     border-bottom: 1px solid #bbb;
     outline: none;
+    background: none;
 }
 
 #fh5co-header button {
@@ -521,7 +487,6 @@ figure {
 
 .fh5co-projects-feed {
     min-height: 300px;
-    top: 220px;
 }
 
 .bgc {
@@ -606,6 +571,3 @@ li {
     width: 100%;
     float: left;
 }
-
-
-/*# sourceMappingURL=style.css.map */

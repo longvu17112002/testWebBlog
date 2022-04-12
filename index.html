@@ -58,12 +58,12 @@
 <body>
 
     <header id="fh5co-header" role="banner">
-        <div class="container text-center">
+        <div class="container text-center nav-pc open-nav">
             <div class="nav open-nav">
                 <div id="fh5co-logo">
                     <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
                 </div>
-                <nav class="nav-pc open-nav">
+                <nav>
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="work.html">Blog</a></li>
@@ -71,45 +71,34 @@
                         <li><a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
                     </ul>
                 </nav>
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                </div>
 
-                <!-- Use any element to open the sidenav -->
-                <span onclick="openNav()"><i class="icon-menu"></i></span>
-
-                <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-                <!-- <div id="main">
-                    ...
-                </div> -->
             </div>
-
-            <!-- <div class="nav-mobile">
-                <div class="nav-img">
-                    <img src="images/logo.png" alt="">
-                </div>
-                <div class="side-nav">
-
-                    <div><a href="about.html">About</a></div>
-                    <div><a href="work.html">Blog</a></div>
-                    <div><a href="contact.html">Contact</a></div>
-                    <div><a href="https://www.facebook.com/tantoan2014">Facebook</a></div>
-                    <form action="" class="search-bar">
-                        <input type="text">
-                        <button type="submit"><i class="icon-search3"></i></button>
-                    </form>
-                </div>
-            </div> -->
 
             <form action="" class="search-bar">
                 <input type="text">
                 <button type="submit"><i class="icon-search3"></i></button>
             </form>
 
+        </div>
+
+        <div class="container text-center mobile-nav">
+            <div class="sub-menu-logo">
+                <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
+            </div>
+            <div class="sub-menu-icon">
+                <i class="icon-menu3"></i>
+            </div>
+            <div class="sub-menu">
+                <i class="icon-close2"></i>
+                <a href="about.html">About</a>
+                <a href="work.html">Blog</a></li>
+                <a href="contact.html">Contact</a>
+                <a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
+                <form action="" class="search-bar">
+                    <input type="text">
+                    <button type="submit"><i class="icon-search3"></i></button>
+                </form>
+            </div>
         </div>
     </header>
     <!-- END #fh5co-header -->
@@ -250,27 +239,30 @@
 
 </body>
 <script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "235px";
-        document.getElementById("main").style.marginLeft = "150px";
-    }
-
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
+    var mobileMenu = document.querySelector(".sub-menu-icon");
+    var subMenu = document.querySelector(".sub-menu");
+    mobileMenu.onclick = function() {
+        if (subMenu.style.display === "flex") {
+            subMenu.style.display = "none";
+        } else {
+            subMenu.style.display = "flex";
+        }
     }
 </script>
 <script>
+    const navPc = document.querySelector('.nav-pc')
+    const navMobile = document.querySelector('.mobile-nav');
     window.onscroll = function() {
         scrollFunction()
     };
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("nav-pc").classList.remove('open-nav')
+            navPc.classList.remove('open-nav')
+            navMobile.classList.add('open-mobile-nav')
         } else {
-            document.getElementById("nav-pc").classList.add('open-nav')
+            navPc.classList.add('open-nav')
+            navMobile.classList.remove('open-mobile-nav')
         }
     }
 </script>
