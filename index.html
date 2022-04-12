@@ -59,11 +59,11 @@
 
     <header id="fh5co-header" role="banner">
         <div class="container text-center">
-            <div class="nav-pc">
+            <div class="nav open-nav">
                 <div id="fh5co-logo">
                     <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
                 </div>
-                <nav>
+                <nav class="nav-pc open-nav">
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="work.html">Blog</a></li>
@@ -71,6 +71,21 @@
                         <li><a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
                     </ul>
                 </nav>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()"><i class="icon-menu"></i></span>
+
+                <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+                <!-- <div id="main">
+                    ...
+                </div> -->
             </div>
 
             <!-- <div class="nav-mobile">
@@ -100,131 +115,7 @@
     <!-- END #fh5co-header -->
 
 
-    <!-- <div class="container-fluid pt70 pb70">
-        <div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_20.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_19.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_3.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_4.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_5.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_6.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_7.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_8.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_9.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_10.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_11.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_12.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_13.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_14.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_15.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_16.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_17.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_18.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_19.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-            <div class="fh5co-project masonry-brick">
-                <a href="single.html">
-                    <img src="images/img_20.jpg" alt="Free HTML5 by FreeHTML5.co">
-                    <h2>Your Project Title Here</h2>
-                </a>
-            </div>
-        </div>
-        END .fh5co-projects-feed
-    </div> -->
+
     <div class="container-fluid pt70 pb70">
         <div class="row">
             <div id="fh5co-projects-feed" class=" fh5co-projects-feed clearfix masonry ">
@@ -358,5 +249,30 @@
     <script src="js/main.js"></script>
 
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "235px";
+        document.getElementById("main").style.marginLeft = "150px";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+<script>
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("nav-pc").classList.remove('open-nav')
+        } else {
+            document.getElementById("nav-pc").classList.add('open-nav')
+        }
+    }
+</script>
 
 </html>
