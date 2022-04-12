@@ -56,24 +56,49 @@
 </head>
 
 <body>
-
     <header id="fh5co-header" role="banner">
-        <div class="container text-center">
-            <div id="fh5co-logo">
+        <div class="container text-center nav-pc open-nav">
+            <div class="nav open-nav">
+                <div id="fh5co-logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="work.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <form action="" class="search-bar">
+                <input type="text">
+                <button type="submit"><i class="icon-search3"></i></button>
+            </form>
+        </div>
+
+        <div class="container text-center mobile-nav">
+            <div class="sub-menu-logo">
                 <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li class="active"><a href="work.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
-                </ul>
-            </nav>
+            <div class="sub-menu-icon">
+
+                <i class="icon-menu3"></i>
+            </div>
+            <div class="sub-menu">
+                <form action="" class="search-bar">
+                    <input type="search" placeholder="Search...">
+                    <i class="icon-search3"></i>
+                    <!-- <button type="submit"><i class="icon-search3"></i></button> -->
+                </form>
+                <a href="about.html">About</a>
+                <a href="work.html">Blog</a></li>
+                <a href="contact.html">Contact</a>
+                <a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
+
+            </div>
         </div>
     </header>
-    <!-- END #fh5co-header -->
-
 
     <div class="container-fluid pt70 pb70">
         <div class="row">
@@ -207,5 +232,40 @@
     <script src="js/main.js"></script>
 
 </body>
+<script>
+    var mobileMenu = document.querySelector(".sub-menu-icon");
+    var subMenu = document.querySelector(".sub-menu");
+    const subMenuIcon = document.querySelector('.sub-menu-icon i')
+    mobileMenu.onclick = function() {
+        if (subMenu.style.display === "flex") {
+            subMenu.style.display = "none";
+            subMenuIcon.classList.remove('icon-cross')
+            subMenuIcon.classList.add('icon-menu3')
+        } else {
+            subMenu.style.display = "flex";
+            subMenuIcon.classList.add('icon-cross')
+            subMenuIcon.classList.remove('icon-menu3')
+        }
+    }
+</script>
+<script>
+    const navPc = document.querySelector('.nav-pc')
+    const navMobile = document.querySelector('.mobile-nav');
+
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            navPc.classList.remove('open-nav')
+            navMobile.classList.add('open-mobile-nav')
+
+        } else {
+            navPc.classList.add('open-nav')
+            navMobile.classList.remove('open-mobile-nav')
+        }
+    }
+</script>
 
 </html>

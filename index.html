@@ -86,18 +86,20 @@
                 <a href="index.html"><img src="images/logo.png" alt="Banner"></a>
             </div>
             <div class="sub-menu-icon">
+
                 <i class="icon-menu3"></i>
             </div>
             <div class="sub-menu">
-                <i class="icon-close2"></i>
+                <form action="" class="search-bar">
+                    <input type="search" placeholder="Search...">
+                    <i class="icon-search3"></i>
+                    <!-- <button type="submit"><i class="icon-search3"></i></button> -->
+                </form>
                 <a href="about.html">About</a>
                 <a href="work.html">Blog</a></li>
                 <a href="contact.html">Contact</a>
                 <a href="https://www.facebook.com/tantoan2014">Facebook</a></li>
-                <form action="" class="search-bar">
-                    <input type="text">
-                    <button type="submit"><i class="icon-search3"></i></button>
-                </form>
+
             </div>
         </div>
     </header>
@@ -241,17 +243,23 @@
 <script>
     var mobileMenu = document.querySelector(".sub-menu-icon");
     var subMenu = document.querySelector(".sub-menu");
+    const subMenuIcon = document.querySelector('.sub-menu-icon i')
     mobileMenu.onclick = function() {
         if (subMenu.style.display === "flex") {
             subMenu.style.display = "none";
+            subMenuIcon.classList.remove('icon-cross')
+            subMenuIcon.classList.add('icon-menu3')
         } else {
             subMenu.style.display = "flex";
+            subMenuIcon.classList.add('icon-cross')
+            subMenuIcon.classList.remove('icon-menu3')
         }
     }
 </script>
 <script>
     const navPc = document.querySelector('.nav-pc')
     const navMobile = document.querySelector('.mobile-nav');
+
     window.onscroll = function() {
         scrollFunction()
     };
@@ -260,6 +268,7 @@
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             navPc.classList.remove('open-nav')
             navMobile.classList.add('open-mobile-nav')
+
         } else {
             navPc.classList.add('open-nav')
             navMobile.classList.remove('open-mobile-nav')

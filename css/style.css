@@ -6,14 +6,6 @@
     font-style: normal;
 }
 
-
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
-
 body {
     font-family: "Roboto", Arial, serif;
     line-height: 1.8;
@@ -91,10 +83,6 @@ figure {
     margin-bottom: 30px;
 }
 
-#fh5co-header .icon-menu {
-    /* display: none; */
-}
-
 #fh5co-header #fh5co-logo img {
     max-width: 100%;
     width: auto;
@@ -131,8 +119,6 @@ figure {
 
 .nav-pc {
     display: none;
-    /* display: flex;
-    justify-content: space-around; */
 }
 
 .mobile-nav.open-mobile-nav {
@@ -149,13 +135,14 @@ figure {
     left: 0;
     bottom: 0;
     top: 0;
-    background: #2da9d7;
+    background: #fcfcfc;
     /* display: none; */
     height: 46px;
     width: 100%;
     justify-content: left;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     /* transition: top 0.5s; */
+    animation: header-trasition ease 0.4s;
 }
 
 .sub-menu {
@@ -164,16 +151,23 @@ figure {
     flex-direction: column;
     width: 170px;
     height: 190px;
-    background: #f1f1f1;
+    background-color: #fcfcfc;
     position: absolute;
     right: 0;
     left: auto;
     top: 46px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    animation: header-trasition ease 0.4s;
 }
 
 .sub-menu-icon {
-    width: 55px;
+    /* width: 55px; */
     margin-left: auto;
+    display: flex;
+}
+
+.sub-menu a {
+    color: #000;
 }
 
 .sub-menu-icon i {
@@ -232,6 +226,15 @@ figure {
     max-width: 30px;
     background: none;
     color: #bbb;
+}
+
+#fh5co-header .icon-search3 {
+    opacity: 0.7;
+}
+
+#fh5co-header .icon-search3:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #fh5co-header button:hover {
@@ -371,16 +374,8 @@ figure {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .page-content {
-        /* padding-left: 15px;      
-        padding-right: 15px; */
-    }
-}
-
 @media (min-width: 1024px) {
     .fh5co-projects-feed {
-        /* width: 950px; */
         max-width: 1350px;
     }
     .row {
@@ -412,6 +407,17 @@ figure {
     }
     .row {
         margin: 0 0;
+    }
+}
+
+@keyframes header-trasition {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -447,6 +453,12 @@ figure {
 @media screen and (max-width: 480px) {
     #fh5co-footer .social a {
         padding: 5px;
+    }
+    .nav-pc.open-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: flex;
     }
 }
 
@@ -494,11 +506,6 @@ figure {
 }
 
 .imgwork img {
-    /* display: block;
-    max-width: 300px;
-    max-height: 600px;
-    width: auto;
-    height: auto; */
     width: 100%;
     max-width: 300px;
     max-height: 600px;
